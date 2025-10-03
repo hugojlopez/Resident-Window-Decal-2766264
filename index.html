@@ -12,8 +12,14 @@
   <link rel="shortcut icon" sizes="16x16 32x32 48x48" href="/favicon.ico?20220629">
 
   <style>
-    body {
+    /* Reset completo de margenes y padding */
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
       font-family: 'Inter', sans-serif;
       background-color: #fff;
       color: #333;
@@ -35,43 +41,45 @@
     }
 
     .container {
-      padding: 25px 40px;
+      padding: 25px 0;
+      width: 100%;
     }
 
     .resident-label {
       font-size: 15px;
       color: #444;
       margin-bottom: 6px;
+      padding-left: 25px; /* opcional para separación del borde */
     }
 
-    /* Sección residente actualizada */
     .resident {
       display: flex;
-      align-items: center; /* alinea elementos en altura */
+      align-items: center;
       gap: 15px;
+      padding-left: 25px; /* opcional para separación del borde */
     }
 
     .resident svg {
-      width: 38px;   /* QR y carro más grandes */
+      width: 38px;
       height: 38px;
       flex-shrink: 0;
     }
 
     .resident strong {
-      font-size: 38px;  /* número más grande */
+      font-size: 38px;
       font-weight: 700;
       color: #111;
     }
 
     .yellow-box {
       display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 38px;
-    height: 38px;
-    background-color: #ffd13e;
-    border-radius: 6px;
-    flex-shrink: 0;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      background-color: #ffd13e;
+      border-radius: 6px;
+      flex-shrink: 0;
     }
 
     .vehicle-box {
@@ -84,6 +92,7 @@
       align-items: center;
       gap: 8px;
       font-size: 15px;
+      padding-left: 25px; /* opcional para separación del borde */
     }
 
     .vehicle-label {
@@ -102,10 +111,12 @@
       font-size: 12px;
       color: #777;
       margin-bottom: 50px;
+      padding-left: 25px; /* opcional */
     }
 
     .section {
       margin-bottom: 22px;
+      padding-left: 25px; /* opcional */
     }
 
     .section h4 {
