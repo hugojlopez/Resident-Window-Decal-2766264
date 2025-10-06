@@ -47,7 +47,7 @@
       align-items: center;
       gap: 15px;
       padding-left: 25px;
-      margin-bottom: 10px; /* reduce espacio debajo */
+      margin-bottom: 10px;
     }
 
     .resident svg {
@@ -72,6 +72,7 @@
       background-color: #ffd13e;
       border-radius: 6px;
       flex-shrink: 0;
+      transform: translateY(-2px);
     }
 
     .vehicle-box {
@@ -82,7 +83,7 @@
       box-shadow: 0 0 5px rgba(0,0,0,0.08);
       display: flex;
       align-items: center;
-      gap: 8x;
+      gap: 8px;
       font-size: 15px;
       padding-left: 25px;
     }
@@ -108,37 +109,43 @@
 
     .synced {
       font-size: 15px;
-      color: #90829c;
+      color: #9a9aa3;
       margin-top: 15px;
       margin-bottom: 50px;
       padding-left: 25px;
     }
 
+    /* --- Secciones finales --- */
     .section {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
       margin-bottom: 22px;
       padding-left: 25px;
     }
 
     .section h4 {
-      margin: 0 0 4px; /* reduce espacio debajo del título */
+      margin: 0;
       font-size: 15px;
-      display: flex;
-      align-items: center;
       font-weight: 600;
       color: #80828d;
-      gap: 8px;
     }
 
-    .section p {
+    .section-content {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .section-content p {
       margin: 0;
       font-size: 15px;
       font-weight: 400;
       color: #8082ab;
       line-height: 1.5;
-      padding-left: 28px; /* alinea el texto con el inicio del título después del icono */
     }
 
-    /* ICONOS CIRCULARES Y TRIANGULO */
+    /* --- Iconos --- */
     .icon-circle {
       width:20px;
       height:20px;
@@ -152,6 +159,7 @@
       flex-shrink:0;
     }
     .need-help-icon { background-color:#80828d; }
+
     .privacy-icon {
       background-color:#80828d;
       flex-shrink:0;
@@ -221,39 +229,43 @@
 
     <div class="synced" id="synced-text"></div>
 
-    <!-- ICONOS FINALES -->
+    <!-- SECCIONES INFERIORES -->
     <div class="section">
-      <h4>
-        <div class="icon-circle need-help-icon">?</div>
-        Need help?
-      </h4>
-      <p>Please contact your property or parking management with questions, concerns, or changes.</p>
+      <div class="icon-circle need-help-icon">?</div>
+      <div class="section-content">
+        <h4>Need help?</h4>
+        <p>Please contact your property or parking management with questions, concerns, or changes.</p>
+      </div>
     </div>
 
     <div class="section">
-      <h4>
-        <div class="icon-circle privacy-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <path d="M12 17a2 2 0 002-2v-2a2 2 0 00-4 0v2a2 2 0 002 2zm6-6h-1V9a5 5 0 00-10 0v2H6a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2v-8a2 2 0 00-2-2zm-3 0H9V9a3 3 0 016 0v2z"/>
-          </svg>
-        </div>
-        Privacy
-      </h4>
-      <p>Once activated, only public info for permit and vehicle verification is</p> <p>displayed, no personal, private, or location information is available.</p>
+      <div class="icon-circle privacy-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M12 17a2 2 0 002-2v-2a2 2 0 00-4 0v2a2 2 0 002 2zm6-6h-1V9a5 5 0 00-10 0v2H6a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2v-8a2 2 0 00-2-2zm-3 0H9V9a3 3 0 016 0v2z"/>
+        </svg>
+      </div>
+      <div class="section-content">
+        <h4>Privacy</h4>
+        <p>Once activated, only public info for permit and vehicle verification is </p>
+        <p>displayed, no personal, private, or location information is available.</p>
+      </div>
     </div>
 
     <div class="section">
-      <h4>
-        <div class="use-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <path d="M1 21h22L12 2 1 21z"/>
-          </svg>
-          <span>!</span>
-        </div>
-        Use Requirements
-      </h4>
-      <p>Window Decal must be active and valid for the parked vehicle and location.</p> <p>Use of an inactive, revoked, or invalid Window Decal may result in citation,</p> <p>booting, immobilization, or towing at owner's expense.</p>
+      <div class="use-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M1 21h22L12 2 1 21z"/>
+        </svg>
+        <span>!</span>
+      </div>
+      <div class="section-content">
+        <h4>Use Requirements</h4>
+        <p>Window Decal must be active and valid for the parked vehicle and location.</p>
+        <p>Use of an inactive, revoked, or invalid Window Decal may result in citation, </p>
+        <p>booting, immobilization, or towing at owner's expense.</p>
+      </div>
     </div>
+
   </div>
 
   <script>
