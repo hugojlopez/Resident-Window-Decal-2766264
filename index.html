@@ -91,12 +91,13 @@
     .vehicle-label {
       margin-right: 45px;
       font-weight: 400;
-      color: #555;
+      color: #80828d; /* gris igual que Synced */
+      font-weight: 500;
     }
 
     .vehicle-box svg {
-      width: 15px;
-      height: 15px;
+      width: 16px;
+      height: 16px;
       flex-shrink: 0;
     }
 
@@ -193,6 +194,23 @@
       fill: #b2b2b2 !important;
     }
 
+    /* --- Ajuste altura ícono del carro --- */
+    .resident svg:last-of-type {
+      position: relative;
+      top: -1px !important; /* subido para alinearse con el cuadro amarillo */
+    }
+
+    /* --- Estilo del QR code --- */
+    .resident svg:first-of-type {
+      background-color: #000 !important; /* fondo negro */
+      border-radius: 6px !important; /* esquinas redondeadas */
+      padding: 3px !important;
+      width: 29px !important;  /* ligeramente más pequeño */
+      height: 29px !important;
+    }
+    .resident svg:first-of-type path {
+      fill: #ffffff !important; /* QR blanco */
+    }
   </style>
 </head>
 <body>
@@ -205,8 +223,8 @@
     <div class="resident-label">Resident</div>
     <div class="resident">
       <!-- QR Icon -->
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="background:#000; padding:4px; border-radius:4px;">
-        <path d="M3 3h8v8H3V3zm2 2v4h4V5H5zm6-2h8v8h-8V3zm2 2v4h4V5h-4zM3 13h8v8H3v-8zm2 2v4h4v-4H5zm10 0h-2v2h2v-2zm0 4h-2v2h2v-2zm2-4v2h2v-2h-2zm0 4v4h-4v-2h2v-2zm2 0h2v4h-4v-2h2v-2zm0-4h4v4h-4v-4z" fill="#fff"/>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="1 1 21 21">
+        <path d="M3 3h8v8H3V3zm2 2v4h4V5H5zm6-2h8v8h-8V3zm2 2v4h4V5h-4zM3 13h8v8H3v-8zm2 2v4h4v-4H5zm10 0h-2v2h2v-2zm0 4h-2v2h2v-2zm2-4v2h2v-2h-2zm0 4v4h-4v-2h2v-2zm2 0h2v4h-4v-2h2v-2zm0-4h4v4h-4v-4z"/>
       </svg>
 
       <strong>2766264</strong>
@@ -317,6 +335,3 @@
 
 </body>
 </html>
-
-
-
